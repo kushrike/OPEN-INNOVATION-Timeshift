@@ -86,7 +86,7 @@ function captureUserMedia(callback) {
     video.setAttribute('id', 'myVideo');
     //video.setAttribute('')
     participants.insertBefore(video, participants.firstChild);
-    dynamicallyLoadScript('static/obj.js');
+    //dynamicallyLoadScript('static/obj.js');
 
     getUserMedia({
         video: video,
