@@ -1,1 +1,1 @@
-## OPEN-INNOVATION-Timeshift
+## OPEN-INNOVATION-Team Timeshift
