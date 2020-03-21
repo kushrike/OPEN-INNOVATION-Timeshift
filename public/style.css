@@ -2,17 +2,17 @@
 * {
     box-sizing: border-box;
   }
-  
+
   html, body {
     height: 150%;
     margin: 0;
     padding: 0;
   }
-  
+
   /**
    * Canvas
    */
-  
+
   .whiteboard {
     height: 100%;
     width: 80%;
@@ -25,7 +25,7 @@
     border-style: dashed;
     border-color: red red red red;
   }
-  
+
   .colors {
     position:fixed;
     table-layout: fixed;
@@ -35,7 +35,7 @@
     background-color: lightsalmon;
     border-radius: 24px;
   }
-  
+
   .color {
     border-radius: 28px;
     border: 1px;
@@ -44,10 +44,10 @@
     height: 48px;
     width: 48px;
   }
-  
+
   .color.black { background-color: black; }
   .color.red { background-color: red; }
-  .color.magenta { background-color: magenta;} 
+  .color.magenta { background-color: magenta;}
   .color.green { background-color: green; }
   .color.cyan { background-color: cyan;}
   .color.blue { background-color: blue; }
@@ -65,4 +65,35 @@
     text-align: center;
     display: inline-block;
     font-size: 28px;
+  }
+  #chat-window{
+    position:relative;
+    display:block;
+    width:100%;
+    height:500px;
+    background: #fff;
+    border-bottom: 1px solid rgb(102, 155, 204);
+    margin-bottom: 20px;
+    color:black;
+    overflow:scroll;
+
+
+  }
+  #chat-app{
+    display: block;
+    width:100%;
+    font-size:16px;
+    color:black;
+    margin: 10px;
+    padding:20px;
+    position: relative;
+    top:1200px;
+    border-bottom: 1px solid rgb(102, 155, 204);
+    background: rgb(0, 71, 138);
+
+  }
+  input{
+    z-index:1;
+    width:300px;
+    height:70px;
   }

@@ -6,6 +6,7 @@ const port = process.env.PORT || 8080;
 app.use(express.static(__dirname + '/public'));
 function onConnection(socket){
   socket.on('drawing', (data) => socket.broadcast.emit('drawing', data));
+  socket.on('chat', (data) => io.sockets.emit('chat', data));
 }
 io.on('connection', onConnection);
 http.listen(port, () => console.log('listening on port ' + port));

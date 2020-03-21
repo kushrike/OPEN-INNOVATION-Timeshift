@@ -20,8 +20,19 @@
     <div class="color white"></div>
   <button class="button">D / L</button>
   </div>
+  <div id="chat-app">
+  <div id="chat-window">
+    <div id="output"></div>
+  </div>
+  <input id="handle" type="text" placeholder="handle"/>
+  <input id="message" type="text" placeholder="message" value="aryan"/>
+  <input type="button" value="Send" id="send" class="button"/>
+
+  </div>
 
   <script src="/socket.io/socket.io.js"></script>
+  <!-- <script src="./static/broadcast.js"> </script>
+  <script src="./static/broadcast-ui.js"> </script> -->
   <script src="/main.js"></script>
 </body>
 </html>
