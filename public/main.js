@@ -4,10 +4,15 @@
     var canvas = document.getElementsByClassName('whiteboard')[0];
     var colors = document.getElementsByClassName('color');
     var context = canvas.getContext('2d');
-
+  var slider = document.getElementById("myRange");
     var current = {
-      color: 'black'
+      color: 'black',
+      size: 2
     };
+  slider.oninput = function () {
+    console.log(this.value);
+  current.size = this.value;
+}
     var drawing = false;
 
     canvas.addEventListener('mousedown', onMouseDown, false);
@@ -36,7 +41,7 @@
       context.moveTo(x0, y0);
       context.lineTo(x1, y1);
       context.strokeStyle = color;
-      context.lineWidth = 2;
+      context.lineWidth = current.size;
       context.stroke();
       context.closePath();
 
@@ -117,7 +122,7 @@ var socket = io();
 btn = document.getElementById("send")
 message = document.getElementById("message")
 handle = document.getElementById("handle")
-out = document.getElementById("output")
+out = document.getElementById("output");
 btn.addEventListener('click', function () {
   socket.emit('chat', {
     message: message.value,
@@ -128,4 +133,5 @@ btn.addEventListener('click', function () {
   //Listen for Messages
 socket.on('chat', function (data) {
   out.innerHTML += '<p><strong>' + data.handle + ' </strong>' + data.message + '</p>';
-  })
+})
+  //Normal Code
